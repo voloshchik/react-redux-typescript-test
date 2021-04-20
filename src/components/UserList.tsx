@@ -26,7 +26,7 @@ const UserList = () => {
       <h3>User List</h3>
       {users.map((user) => {
         return (
-          <div className='card'>
+          <div className='card' key={user.id.toString()}>
             <ul className='list-group list-group-flush'>
               <li className='list-group-item'>{user.name}</li>
             </ul>

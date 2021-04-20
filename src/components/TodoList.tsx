@@ -22,7 +22,7 @@ const TodoList = () => {
       <h3>Todo List</h3>
       {todos.map((todo) => {
         return (
-          <div className='card'>
+          <div className='card' key={todo.id}>
             <ul className='list-group list-group-flush'>
               <li className='list-group-item'>{todo.title}</li>
             </ul>
