@@ -13,7 +13,7 @@ export const fetchTodo = (page = 1, limit = 10) => {
 
       setTimeout(() => {
         dispatch({ type: TodoActionTypes.FETCH_TODO_SUCCESS, payload: response.data })
-      }, 2000)
+      }, 1000)
     } catch (error) {
       dispatch({ type: TodoActionTypes.FETCH_ERROR, payload: error.message })
       console.log(error)

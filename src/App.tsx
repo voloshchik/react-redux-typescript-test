@@ -6,10 +6,14 @@ import 'bootstrap/dist/css/bootstrap.min.css'
 function App() {
   return (
     <div className='container'>
-      <h1>hello</h1>
-      <UserList />
-      <hr />
-      <TodoList />
+      <div className='row'>
+        <div className='col-sm'>
+          <UserList />
+        </div>
+        <div className='col-sm'>
+          <TodoList />
+        </div>
+      </div>
     </div>
   )
 }

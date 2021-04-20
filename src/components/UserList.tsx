@@ -23,6 +23,7 @@ const UserList = () => {
 
   return (
     <div>
+      <h3>User List</h3>
       {users.map((user) => {
         return (
           <div className='card'>
