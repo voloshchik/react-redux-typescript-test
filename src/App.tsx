@@ -1,10 +1,11 @@
 import React from 'react'
 import TodoList from './components/TodoList'
 import UserList from './components/UserList'
+import 'bootstrap/dist/css/bootstrap.min.css'
 
 function App() {
   return (
-    <div className='App'>
+    <div className='container'>
       <h1>hello</h1>
       <UserList />
       <hr />

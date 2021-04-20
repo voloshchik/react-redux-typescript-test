@@ -20,7 +20,13 @@ const TodoList = () => {
   return (
     <div>
       {todos.map((todo) => {
-        return <div key={todo.id}>{todo.title}</div>
+        return (
+          <div className='card'>
+            <ul className='list-group list-group-flush'>
+              <li className='list-group-item'>{todo.title}</li>
+            </ul>
+          </div>
+        )
       })}
     </div>
   )

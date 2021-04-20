@@ -23,9 +23,14 @@ const UserList = () => {
 
   return (
     <div>
-      <h3>test</h3>
       {users.map((user) => {
-        return <p key={user.id}>{user.name}</p>
+        return (
+          <div className='card'>
+            <ul className='list-group list-group-flush'>
+              <li className='list-group-item'>{user.name}</li>
+            </ul>
+          </div>
+        )
       })}
     </div>
   )

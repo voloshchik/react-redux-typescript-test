@@ -6,7 +6,7 @@ export const fetchUsers = () => {
   return async (dispatch: Dispatch<UserAction>) => {
     try {
       dispatch({ type: UserActionTypes.FETCH_USERS })
-      const response = await axios.get('https://jsonplaceholder.typicode.com/users?_limits=5')
+      const response = await axios.get('https://jsonplaceholder.typicode.com/users?_limit=5')
       console.log('response', response.data)
 
       setTimeout(() => {
