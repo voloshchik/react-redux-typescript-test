@@ -1,4 +1,5 @@
 import React from 'react'
+import TodoList from './components/TodoList'
 import UserList from './components/UserList'
 
 function App() {
@@ -6,6 +7,8 @@ function App() {
     <div className='App'>
       <h1>hello</h1>
       <UserList />
+      <hr />
+      <TodoList />
     </div>
   )
 }

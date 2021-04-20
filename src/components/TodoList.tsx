@@ -1,18 +1,14 @@
 import React, { useEffect } from 'react'
-
 import { useAction } from '../hooks/useAction'
-
 import { useTypesSelector } from '../hooks/useTypesSelector'
 
-const UserList = () => {
-  const { fetchUsers } = useAction()
-  const { users, error, loading } = useTypesSelector((state) => state.user)
+const TodoList = () => {
+  const { error, limit, loading, todos } = useTypesSelector((state) => state.todo)
+  const { fetchTodo } = useAction()
 
   useEffect(() => {
-    fetchUsers()
+    fetchTodo()
   }, [])
-  console.log('users', users)
-
   if (loading) {
     return <h1>Loding...</h1>
   }
@@ -23,12 +19,11 @@ const UserList = () => {
 
   return (
     <div>
-      <h3>test</h3>
-      {users.map((user) => {
-        return <p key={user.id}>{user.name}</p>
+      {todos.map((todo) => {
+        return <div key={todo.id}>{todo.title}</div>
       })}
     </div>
   )
 }
 
-export default UserList
+export default TodoList
